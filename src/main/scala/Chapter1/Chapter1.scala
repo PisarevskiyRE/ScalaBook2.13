@@ -1,6 +1,6 @@
 package Chapter1
 
-object Chapter1 extends App {
+object Chapter1{
 
   def printMsg(msg:String): Unit ={
     println(msg)
