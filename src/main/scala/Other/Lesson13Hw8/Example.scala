@@ -1,13 +1,12 @@
 package Other.Lesson13Hw8
 
-import cats.Show
-import cats.implicits._
+import Other.Lesson13Hw8.Show._
 
-object Example {
+object Example extends App {
 
-  def example[A: Show, B: Show](a: A, b: B) =
-    show "A is $a, B is $b"
-
-  def example[A, B](implicit eva: Show[A], evb: Show[B]) = ???
+  println("124".show)
+  println(true.show)
+  println(123.show)
+  println(List(1,2,3).show)
 
 }
