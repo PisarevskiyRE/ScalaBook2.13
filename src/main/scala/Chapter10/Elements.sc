@@ -97,7 +97,7 @@ object Spiral {
 
 
 
-println(Spiral.spiral(17, 0))
+println(Spiral.spiral(22, 0))
 
 
 
