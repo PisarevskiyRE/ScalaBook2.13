@@ -1,4 +1,4 @@
-class Rational(n: Int, d: Int) {
+class Rational(n: Int, d: Int) extends Ordered[Rational] {
   require(d != 0)
 
 
@@ -56,6 +56,8 @@ class Rational(n: Int, d: Int) {
     //  println(b.toString + " - " + (a % b).toString)
       gcd(b, a % b)
     }
+
+  override def compare(that: Rational): Int = (this.number * that.denom) - (that.number * this.denom)
 }
 
 
@@ -64,6 +66,8 @@ val r2 = new Rational(3,4)
 
 
 r1 + r2
+
+r1 < r2
 
 r1 lessThan r2
 r2 lessThan r1
