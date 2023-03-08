@@ -6,6 +6,7 @@ val lines = csv.split("\n")
 lines.foreach(println)
 
 
+
 class Parser[T, Src](private  val p: Src => (T, Src)){
   def flatMap[M](f: T => Parser[M, Src]): Parser[M,Src] =
     Parser { src =>

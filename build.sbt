@@ -14,3 +14,7 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.14"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % "test"
 
+
+
+libraryDependencies += "dev.zio" %% "zio" % "1.0.18"
+libraryDependencies += "dev.zio" %% "zio-config" % "1.0.10"
