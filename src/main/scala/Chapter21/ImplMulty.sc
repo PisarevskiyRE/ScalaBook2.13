@@ -8,4 +8,4 @@ implicit def intoToDigits(i: Int): Seq[Int] = i.toString.toList.map(_.toInt)
 
 
 
-printLength(12)
+//printLength(12)
