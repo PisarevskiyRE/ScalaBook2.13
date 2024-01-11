@@ -39,3 +39,13 @@ for {
     a1 <- b1.authors
     a2 <- b2.authors if a1 == a2
 } yield a1
+
+// или
+
+books.flatMap(
+  b1 => books.withFilter(
+    b2 => b1 != b2).flatMap(
+    b2 => b1.authors.flatMap(
+      a1 => b2.authors.withFilter(
+        a2=> a1 == a2).map(
+        a2 => a1))))
