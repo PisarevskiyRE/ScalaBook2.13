@@ -1,15 +1,15 @@
-def twoSum(nums: Array[Int], target: Int): Array[Int] = {
-
-  val result = for {
-    n1 <- nums
-    n2 <- nums if (n1 + n2 == target)
-  } yield n1
-
-  result
-}
 
 
-twoSum(Array(2,7,11,15), 9)
 
+val nums: Array[Int] = Array(3,2,4)
+val target: Int = 6
 
+nums(1)
+val len = nums.length
+(0 to nums.length-1).flatMap( x =>
+  (x+1 to nums.length-1).flatMap( y =>
+    if ((nums(x) + nums(y)) == target ) Array(x,y)
+    else Nil
+  )
+)
 
