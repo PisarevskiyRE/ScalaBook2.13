@@ -1,20 +1,22 @@
-val s = "absdrrr"
+//def selectAndRemaining(str: String, n: Int): (String, String) = {
+//  val (selected, remaining) = str.zipWithIndex.partition {
+//    case (char, index) => (index + 1) % n == 0
+//  }
+//
+//  val selectedChars = selected.map(_._1).mkString
+//  val remainingChars = remaining.map(_._1).mkString
+//
+//  (selectedChars, remainingChars)
+//}
+//
+//// Пример использования:
+//val inputString = "ABCDEFGHIJKLMNOPQSTUVWXYZ"
+//selectAndRemaining(inputString, 6)
 
 
-//    for (int length = s.length(); length > 0; length--) {
-//      for (int start = 0; start <= s.length() - length; start++) {
-//        if (check(start, start + length, s)) {
-//          return s.substring(start, start + length);
-//        }
-//      }
-//    }
 
 
-(- s.length until 0).map( x=>
-  (0 to s.length - x.abs).map( y=>
 
-    println(y.toString +"/"+(y+x.abs).toString)
-
-  )
-)
-
+"ABCDEFGHIJKLMNOPQSTUVWXYZ".zipWithIndex.partition {
+  case (char, index) => (((index + 1) % 6 == 0) || ((index ) % 6 == 0)) && index != 0
+}
