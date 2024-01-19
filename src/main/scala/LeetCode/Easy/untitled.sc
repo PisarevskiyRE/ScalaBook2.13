@@ -1,12 +1,18 @@
+import scala.Array.ofDim
 
-var result: String = ""
 
-for(chr <- "1000".toCharArray) {
+val s: String = "ab"
+val p: String = "a*"
 
-  if (chr == '-' || chr == '0'|| chr == '1'|| chr == '2'|| chr == '3'|| chr == '4'|| chr == '5'|| chr == '6'|| chr == '7'|| chr == '8' || chr == '9'){
-    result += chr
-  }
+val T = ofDim[Boolean](s.length + 1, p.length + 1)
 
+T(0)(0) = true
+
+(1 to T(0).length).map{ i =>
+  if (p(i-1) == '*') T(0)(i) = T(0)(i-2)
 }
 
-result
+
+
+
+println(T)
