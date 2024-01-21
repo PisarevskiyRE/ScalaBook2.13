@@ -1,3 +1,6 @@
 
+val s1 = "abcdefg"
+val s2 = "efL"
 
-"123123412"(0)
+
+s1.indexOf(s2)
