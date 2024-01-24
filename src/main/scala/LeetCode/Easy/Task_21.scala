@@ -9,7 +9,7 @@ object Task_21 extends App{
 
   def mergeTwoLists(list1: ListNode, list2: ListNode): ListNode = {
 
-    def loop(a: ListNode, b: ListNode, ab: ListNode = new ListNode()): ListNode =
+    def loop(a: ListNode, b: ListNode, ab: ListNode = new ListNode()): Unit =
       (a, b) match {
         case (null, null) => ab
         case (i, null) => ab.next = i; ab
@@ -19,7 +19,6 @@ object Task_21 extends App{
             ab.next = i
             loop(i.next, j, ab.next)
           } else {
-
             ab.next = j
             loop(i, j.next, ab.next)
           }
