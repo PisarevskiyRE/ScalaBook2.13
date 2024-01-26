@@ -1,4 +1,8 @@
+import scala.collection.mutable
 
-val t: Int = -2147483648
+val wordMap = mutable.Map[String, Int]()
 
--2147483648 < 0
+
+wordMap += ("a"-> 1 )
+
+wordMap -=  "a"
