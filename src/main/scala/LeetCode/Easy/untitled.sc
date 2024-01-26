@@ -1,6 +1,4 @@
-val example = Array(0,0,1,1,1,2,2,3,3,4)
 
+val t: Int = -2147483648
 
-example.length
-
-example(2)
+-2147483648 < 0
