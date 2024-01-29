@@ -1,9 +1,26 @@
-def sortArrayInRange(arr: Array[Int], a: Int, b: Int): Array[Int] = {
-  val sortedSlice = arr.slice(a, b + 1).sorted
-  arr.patch(a, sortedSlice, sortedSlice.length)
+def searchTest(a: Array[Int], n: Int): Int = {
+
+  var left = 0
+  var right = a.length
+  var ans: Int = -1
+
+
+  while (left < right) {
+    val mid = a.length / 2
+
+    if (a(mid) < n) {
+      left = mid
+    } else if (a(mid) > n) {
+      right = mid
+    } else ans = mid
+
+  }
+
+  ans
 }
 
-// Пример использования:
-val myArray = Array(9, 8, 7, 6, 5, 4, 3)
-val sortedArray = sortArrayInRange(myArray, 2, 5)
-println(sortedArray.mkString(", "))
+
+
+
+
+searchTest(Array(3,4,5,6,7,8,9,10,11), 8)
